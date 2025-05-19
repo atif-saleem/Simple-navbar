@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <!-- <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .navbar { background-color: #3498db; padding: 1rem; display: flex; justify-content: space-between;
+       align-items: center; }
+      .navbar .logo { color: #fff; font-size: 1.5rem; font-weight: bold; }
+    .navbar ul { list-style: none; display: flex; gap: 1rem; }
+    .navbar li { color: #fff; cursor: pointer; }
+    .navbar .menu-toggle { display: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      .navbar ul { display: none; flex-direction: column; gap: 0.5rem; }
+      .navbar .menu-toggle { display: block; }
+      .navbar.active ul { display: flex; }
+    }
+  </style> -->
+</head>
+<body>
+<div class="navbar">
+  <div class="logo">DevOOPS</div>
+  <span class="toggle-menu" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></span>
+  <ul>
+    <li onclick="hideMenu()">About</li>
+    <li onclick="hideMenu()">Conatct</li>
+    <li onclick="hideMenu()">Logout</li>
+    <li onclick="hidemMenu()">Home</li>
+  </ul>
+</div>
+
+
+</body>
+</html>
+<script>
+  function showSidebar(){
+    const navbar=document.querySelector(".navbar");
+    const toggleMenu=document.querySelector(".toggle-menu");
+    navbar.classList.toggle('active');
+    toggleMenu.innerHTML=navbar.classList.contains('active')?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'
+  }
+  function hideMenu(){
+    const navbar=document.querySelector(".navbar");
+    const toggleMenu=document.querySelector(".toggle-menu");
+    navbar.classList.remove('active');
+    toggleMenu.innerHTML='<i class="fa-solid fa-bars"></i>'
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+  function showSidebar(){
+const navbar=document.querySelector(".navbar");
+const menuToggle=document.querySelector(".menu-toggle");
+navbar.classList.toggle("active");
+menuToggle.textContent=navbar.classList.contains('active')?'✖' : '☰';
+
+  }
+  function hideMenu(){
+    const navbar=document.querySelector(".navbar");
+const menuToggle=document.querySelector(".menu-toggle");
+navbar.classList.remove("active");
+menuToggle.textContent= '☰';
+  }
+</script>
+ -->
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="navbar">
+  <div class="logo">LOGO</div>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <ul>
+    <li onclick="hideMenu()">Home</li>
+    <li onclick="hideMenu()">About</li>
+    <li onclick="hideMenu()">Services</li>
+    <li onclick="hideMenu()">Contact</li>
+  </ul>
+</div>
+
+<script>
+  function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    navbar.classList.toggle('active');
+    menuToggle.textContent = navbar.classList.contains('active') ? '✖' : '☰';
+  }
+
+  function hideMenu() {
+    const navbar = document.querySelector('.navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    navbar.classList.remove('active');
+    menuToggle.textContent = '☰';
+  }
+</script> -->
